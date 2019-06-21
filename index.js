@@ -5,6 +5,7 @@ function handleBreedInput() {
       .val()
       .toLowerCase();
     getDogPicture(breed);
+    document.getElementById('breed').reset();
   });
 }
 
@@ -16,7 +17,7 @@ function getDogPicture(breed) {
 }
 
 function displayDogPicture(url) {
-  $("#dog-picture").replaceWith(
+  $("#dog-picture").prepend(
     `<img src="${url.message}" class="dog-image"></img>`
   );
 }
